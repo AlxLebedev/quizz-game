@@ -6,12 +6,12 @@ const drawUI = new DrawUI();
 
 let theme = null;
 
-const themesContainer = document.getElementById('themes')
+const themesContainer = document.getElementById('themes');
 
 themesContainer.addEventListener('click', (event) => {
   if (event.target.dataset.id) {
     theme = event.target.dataset.id;
-    let question = qaGenerator.getQuestion(theme);
+    const question = qaGenerator.getQuestion(theme);
     drawUI.drawQuestion(question);
   }
 });
