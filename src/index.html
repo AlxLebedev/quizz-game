@@ -6,27 +6,28 @@
   <title>Quizz app</title>
 </head>
 <body>
-  <header>
-    <div class="logo"></div>
-  </header>
-  <section class="themes-section section">
-    <div class="themes" id="themes">
-      <div class="theme button" data-id="cinema">кино</div>
-      <div class="theme button" data-id="music">музыка</div>
-    </div>
-  </section>
-  <section class="question-section section">
-    <div class="container">
-      <p class="question" id="question-field">Выберите тему вопроса</p>
-    </div>
-  </section>
-  <section class="input-section section">
-    <div class="container">
-      <input type="text" class="input-field">
-    </div>
-  </section>
-  <section class="answer-section section">
-    <div class="answer container"></div>
-  </section>
+  <div class="app-container">
+    <header>
+      <div class="logo"></div>
+      <h1 class="title container">выбери тему викторины</h1>
+    </header>
+    <section class="themes-questions section">
+      <div class="themes" id="themes">
+        <div class="theme button" data-id="cinema">кино</div>
+        <div class="theme button" data-id="music">музыка</div>
+      </div>
+      <div class="question-field container hidden" id="question-field">
+        <p class="question" id="question"></p>
+      </div>
+    </section>
+    <section class="input-section section hidden" id="input-section">
+      <div class="container">
+        <input type="text" class="input-field" id="input-field">
+      </div>
+    </section>
+    <section class="answer-section section hidden" id="answer-section">
+      <div class="answer-symbals container" id="answer-symbals"></div>
+    </section>
+  </div>
 </body>
 </html>

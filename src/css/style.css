@@ -3,15 +3,35 @@
   margin: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
-  background-color: aquamarine;
+  padding: 50px 0 50px 0;
+  background-image: url(../img/background.png);
+  background-size: cover;
+}
+
+.app-container {
+  border: 2px solid #ffffff;
+  margin: 0 auto 0 auto;
+  max-width: 1450px;
+  height: calc(100vh - 100px);
 }
 
 .logo {
   margin: 20px auto 20px auto;
-  width: 100px;
-  height: 100px;
-  background-image: url(../img/time-100.png);
+  width: 150px;
+  height: 150px;
+  background-image: url(../img/quiz-logo.png);
+  background-size: cover;
+}
+
+.title {
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .section {

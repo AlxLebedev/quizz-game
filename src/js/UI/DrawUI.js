@@ -1,9 +1,9 @@
 export default class DrawUI {
   constructor() {
-    this.questionField = document.getElementById('question-field');
+    this.question = document.getElementById('question');
   }
 
   drawQuestion(question) {
-    this.questionField.innerText = question;
+    this.question.innerText = question;
   }
 }
