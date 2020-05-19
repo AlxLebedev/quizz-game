@@ -1,9 +1,9 @@
 import QAGenerator from './Data/QuestionsGenerator';
 import DrawUI from './UI/DrawUI';
 
-const qaGenerator = new QAGenerator();
 const drawUI = new DrawUI();
 drawUI.init();
+const qaGenerator = new QAGenerator();
 
 let theme = null;
 

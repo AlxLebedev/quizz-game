@@ -6,6 +6,7 @@ export default class DrawUI {
 
   init() {
     this.title.innerText = 'выбери тему викторины';
+    this.question.innerText = '';
   }
 
   drawQuestion(question) {

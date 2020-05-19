@@ -9,6 +9,10 @@ body {
   background-size: cover;
 }
 
+.display-none {
+  display: none;
+}
+
 .app-container {
   border: 2px solid #ffffff;
   margin: 0 auto 0 auto;
