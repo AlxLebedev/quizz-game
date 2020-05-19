@@ -7,6 +7,7 @@ const qaGenerator = new QAGenerator();
 
 let theme = null;
 let question = null;
+let answer = null;
 
 const themesContainer = document.getElementById('themes');
 
@@ -14,6 +15,8 @@ themesContainer.addEventListener('click', (event) => {
   if (event.target.dataset.id) {
     theme = event.target.dataset.id;
     question = qaGenerator.getQuestion(theme);
+    answer = qaGenerator.getAnswer(theme, question);
+    
 
     drawUI.showHiddenElements();
     drawUI.drawQuestion(question);

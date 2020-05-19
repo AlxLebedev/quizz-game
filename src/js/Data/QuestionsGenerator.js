@@ -36,6 +36,13 @@ export default class QAGenerator {
     return question;
   }
 
+  getAnswer(theme, question) {
+    let answerString = this[theme][question];
+    let answer = [...answerString];
+
+    return answer;
+  }
+
   randomQuestion(questionsArray) {
     this.randomIndex = Math.floor(Math.random() * questionsArray.length);
     return questionsArray[this.randomIndex];
