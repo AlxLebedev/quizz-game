@@ -4,6 +4,8 @@ export default class DrawUI {
     this.question = document.getElementById('question');
     this.themesContainer = document.getElementById('themes');
     this.hiddenElements = document.querySelectorAll('.hidden');
+    this.answerSymbolsField = document.getElementById('answer-symbols');
+    this.answerSymbols = document.querySelectorAll('.answer-symbol');
   }
 
   init() {
@@ -11,6 +13,11 @@ export default class DrawUI {
 
     if (this.question.innerText.length > 0) {
       this.question.innerText = '';
+    }
+
+    this.answerSymbols = document.querySelectorAll('.answer-symbol');
+    if (this.answerSymbols.length > 0) {
+      this.answerSymbolsField.innerHTML = '';
     }
 
     if (this.hiddenElements.length === 0) {
@@ -29,5 +36,15 @@ export default class DrawUI {
   drawQuestion(question) {
     this.title.innerText = 'ответь на вопрос';
     this.question.innerText = question;
+  }
+
+  drawHiddenAnswer(answer) {
+    const answerLength = answer.length;
+    for (let i = 0; i < answerLength; i += 1) {
+      const answerElement = document.createElement('span');
+      answerElement.classList.add('answer-symbol');
+      answerElement.innerText = '*';
+      this.answerSymbolsField.append(answerElement);
+    }
   }
 }
