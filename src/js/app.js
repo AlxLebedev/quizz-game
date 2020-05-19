@@ -31,7 +31,9 @@ const inputField = document.getElementById('input-field');
 inputField.addEventListener('keypress', (event) => {
   key = event.key;
   drawUI.redrawAnswer(answer, key);
-  isWin();
+  if (isWin()) {
+    console.log('winneeerrrr!!!!!')
+  };
   
 })
 
