@@ -16,7 +16,7 @@ themesContainer.addEventListener('click', (event) => {
     const question = qaGenerator.getQuestion(theme);
 
     if (hiddenElements.length > 0) {
-      hiddenElements.forEach(element => element.classList.remove('hidden'));
+      hiddenElements.forEach((element) => element.classList.remove('hidden'));
       hiddenElements = document.querySelectorAll('.hidden');
     }
 
@@ -30,7 +30,7 @@ const newGameButton = document.getElementById('new-game-button');
 newGameButton.addEventListener('click', () => {
   theme = null;
   hiddenElements = document.querySelectorAll('.hidden-init');
-  hiddenElements.forEach(element => element.classList.add('hidden'));
+  hiddenElements.forEach((element) => element.classList.add('hidden'));
   themesContainer.classList.remove('hidden');
   drawUI.init();
-})
+});
