@@ -29,7 +29,7 @@ const inputField = document.getElementById('input-field');
 
 inputField.addEventListener('keypress', (event) => {
   key = event.key;
-  console.log(key);
+  drawUI.redrawAnswer(answer, key);
   
 })
 
