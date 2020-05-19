@@ -1,5 +1,6 @@
 import QAGenerator from './Data/QuestionsGenerator';
 import DrawUI from './UI/DrawUI';
+import isWin from './checkingLogic/isWin'
 
 const drawUI = new DrawUI();
 drawUI.init();
@@ -30,6 +31,7 @@ const inputField = document.getElementById('input-field');
 inputField.addEventListener('keypress', (event) => {
   key = event.key;
   drawUI.redrawAnswer(answer, key);
+  isWin();
   
 })
 
