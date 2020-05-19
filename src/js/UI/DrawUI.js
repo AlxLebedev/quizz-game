@@ -6,6 +6,7 @@ export default class DrawUI {
     this.hiddenElements = document.querySelectorAll('.hidden');
     this.answerSymbolsField = document.getElementById('answer-symbols');
     this.answerSymbols = document.querySelectorAll('.answer-symbol');
+    this.inputField = document.getElementById('input-field');
   }
 
   init() {
@@ -18,6 +19,11 @@ export default class DrawUI {
     this.answerSymbols = document.querySelectorAll('.answer-symbol');
     if (this.answerSymbols.length > 0) {
       this.answerSymbolsField.innerHTML = '';
+    }
+
+    this.inputField = document.getElementById('input-field');
+    if (this.inputField.value !== '') {
+      this.inputField.value = '';
     }
 
     if (this.hiddenElements.length === 0) {

@@ -8,6 +8,7 @@ const qaGenerator = new QAGenerator();
 let theme = null;
 let question = null;
 let answer = null;
+let key = null;
 
 const themesContainer = document.getElementById('themes');
 
@@ -24,11 +25,20 @@ themesContainer.addEventListener('click', (event) => {
   }
 });
 
+const inputField = document.getElementById('input-field');
+
+inputField.addEventListener('keypress', (event) => {
+  key = event.key;
+  console.log(key);
+  
+})
+
 const newGameButton = document.getElementById('new-game-button');
 
 newGameButton.addEventListener('click', () => {
   theme = null;
   question = null;
   answer = null;
+  key = null;
   drawUI.init();
 });
