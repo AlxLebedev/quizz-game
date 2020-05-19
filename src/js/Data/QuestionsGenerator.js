@@ -24,20 +24,20 @@ export default class QAGenerator {
     switch (theme) {
       case 'music':
         this.questionsArray = Object.keys(this.music);
-        question = this.randomAnswer(this.questionsArray);
+        question = this.randomQuestion(this.questionsArray);
         break;
       case 'cinema':
         this.questionsArray = Object.keys(this.cinema);
-        question = this.randomAnswer(this.questionsArray);
+        question = this.randomQuestion(this.questionsArray);
         break;
       default:
-        question = 'Тема не выбрана';
+        question = 'тема не выбрана';
     }
     return question;
   }
 
-  randomAnswer(answersArray) {
-    this.randomIndex = Math.floor(Math.random() * answersArray.length);
-    return answersArray[this.randomIndex];
+  randomQuestion(questionsArray) {
+    this.randomIndex = Math.floor(Math.random() * questionsArray.length);
+    return questionsArray[this.randomIndex];
   }
 }
