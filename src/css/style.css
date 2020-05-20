@@ -16,7 +16,7 @@ body {
 .app-container {
   border: 2px solid #ffffff;
   margin: 0 auto 0 auto;
-  max-width: 1450px;
+  max-width: 900px;
   height: calc(100vh - 100px);
 }
 
@@ -44,10 +44,16 @@ body {
 .button {
   width: 100px;
   padding: 10px;
-  border-radius: 5px;
-  background-color: cadetblue;
+  border-radius: 10px;
+  background-color: rgba(189, 224, 255, 0.6);
   text-align: center;
   cursor: pointer;
+}
+
+.question-field {
+  background-color: rgba(100, 149, 237, 0.5);
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
 }
 
 .container {
@@ -55,12 +61,19 @@ body {
   width: max-content;
 }
 
+.input-field {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
 .answer-section {
   display: flex;
   background-color: rgba(100, 149, 237, 0.5);
   width: max-content;
   height: max-content;
-  padding: 50px;
+  padding: 30px;
+  border-radius: 30px;
 }
 
 .answer-symbols {
@@ -68,11 +81,14 @@ body {
 }
 
 .answer-symbol {
+  color: #ffffff;
+  font-weight: bold;
   display: flex;
   width: 50px;
   height: 50px;
   padding: 5px;
-  border: 1px solid #000000;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
   margin-right: 10px;
   align-items: center;
   justify-content: center;
