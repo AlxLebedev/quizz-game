@@ -1,10 +1,11 @@
 import QAGenerator from './Data/QuestionsGenerator';
 import DrawUI from './UI/DrawUI';
-import isWin from './checkingLogic/isWin'
+import Checker from './Checker/Checker'
 
 const drawUI = new DrawUI();
 drawUI.init();
 const qaGenerator = new QAGenerator();
+const checker = new Checker();
 
 let theme = null;
 let question = null;
@@ -31,6 +32,9 @@ const inputField = document.getElementById('input-field');
 inputField.addEventListener('keypress', (event) => {
   key = event.key;
   drawUI.redrawAnswer(answer, key);
+  if (checker.isWin()) {
+    console.log('winnneeerrrr!!!!')
+  }
 })
 
 const newGameButton = document.getElementById('new-game-button');
