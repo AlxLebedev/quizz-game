@@ -37,8 +37,8 @@ export default class QAGenerator {
   }
 
   getAnswer(theme, question) {
-    let answerString = this[theme][question];
-    let answer = [...answerString];
+    const answerString = this[theme][question];
+    const answer = [...answerString];
 
     return answer;
   }

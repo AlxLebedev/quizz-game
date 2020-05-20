@@ -1,6 +1,6 @@
 import QAGenerator from './Data/QuestionsGenerator';
 import DrawUI from './UI/DrawUI';
-import Checker from './Checker/Checker'
+import Checker from './Checker/Checker';
 
 const drawUI = new DrawUI();
 drawUI.init();
@@ -19,7 +19,6 @@ themesContainer.addEventListener('click', (event) => {
     theme = event.target.dataset.id;
     question = qaGenerator.getQuestion(theme);
     answer = qaGenerator.getAnswer(theme, question);
-    console.log(answer);
 
     drawUI.showHiddenElements();
     drawUI.drawQuestion(question);
@@ -36,7 +35,7 @@ inputField.addEventListener('keypress', (event) => {
   if (checker.isWin()) {
     drawUI.showCongratulations();
   }
-})
+});
 
 const newGameButton = document.getElementById('new-game-button');
 

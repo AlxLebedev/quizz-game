@@ -25,7 +25,6 @@ export default class DrawUI {
     this.inputField = document.getElementById('input-field');
     if (this.inputField.value !== '') {
       this.clearInputField();
-      // this.inputField.value = '';
     }
 
     if (this.hiddenElements.length === 0) {
