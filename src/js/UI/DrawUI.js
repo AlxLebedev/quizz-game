@@ -65,7 +65,7 @@ export default class DrawUI {
     this.answerSymbols = document.querySelectorAll('.answer-symbol');
     for (let i = 0; i < answer.length; i += 1) {
       if (answer[i] === symbol) {
-        this.answerSymbols[i].innerText = symbol;
+        this.answerSymbols[i].innerText = symbol.toString().toUpperCase();
       }
     }
   }

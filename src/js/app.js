@@ -29,7 +29,7 @@ themesContainer.addEventListener('click', (event) => {
 const inputField = document.getElementById('input-field');
 
 inputField.addEventListener('keypress', (event) => {
-  key = event.key;
+  key = event.key.toLowerCase();
   drawUI.clearInputField();
   drawUI.redrawAnswer(answer, key);
   if (checker.isWin()) {
