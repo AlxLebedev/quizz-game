@@ -31,6 +31,7 @@ const inputField = document.getElementById('input-field');
 
 inputField.addEventListener('keypress', (event) => {
   key = event.key;
+  drawUI.clearInputField();
   drawUI.redrawAnswer(answer, key);
   if (checker.isWin()) {
     drawUI.showCongratulations();

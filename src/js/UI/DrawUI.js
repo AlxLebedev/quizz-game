@@ -24,7 +24,8 @@ export default class DrawUI {
 
     this.inputField = document.getElementById('input-field');
     if (this.inputField.value !== '') {
-      this.inputField.value = '';
+      this.clearInputField();
+      // this.inputField.value = '';
     }
 
     if (this.hiddenElements.length === 0) {
@@ -74,5 +75,10 @@ export default class DrawUI {
     this.newGameButton.innerText = 'Поздравляем! Еще вопросик?';
     this.newGameButton.classList.remove('another-question');
     this.newGameButton.classList.add('new-game');
+  }
+
+  clearInputField() {
+    this.inputField = document.getElementById('input-field');
+    this.inputField.value = '';
   }
 }
