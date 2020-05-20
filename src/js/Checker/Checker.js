@@ -9,8 +9,7 @@ export default class Checker {
 		this.hasUnsolvedSymbols = this.answerSymbols.some(element => element.innerText === '*');
 		if (!this.hasUnsolvedSymbols) {
 			return true;
-		} else {
-			return false;
-		}
+		} 
+		return false;
 	}
 }

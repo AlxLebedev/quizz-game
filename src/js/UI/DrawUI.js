@@ -5,8 +5,9 @@ export default class DrawUI {
     this.themesContainer = document.getElementById('themes');
     this.hiddenElements = document.querySelectorAll('.hidden');
     this.answerSymbolsField = document.getElementById('answer-symbols');
-    this.answerSymbols = document.querySelectorAll('.answer-symbol');
-    this.inputField = document.getElementById('input-field');
+    this.answerSymbols = null;
+    this.inputField = null;
+    this.newGameButton = document.getElementById('new-game-button');
   }
 
   init() {
@@ -30,6 +31,12 @@ export default class DrawUI {
       this.hiddenElements = document.querySelectorAll('.hidden-init');
       this.hiddenElements.forEach((element) => element.classList.add('hidden'));
       this.themesContainer.classList.remove('hidden');
+    }
+
+    if (this.newGameButton.innerText !== 'Хочу другой вопрос...') {
+      this.newGameButton.innerText = 'Хочу другой вопрос...';
+      this.newGameButton.classList.remove('new-game');
+      this.newGameButton.classList.add('another-question');
     }
   }
 
@@ -61,5 +68,11 @@ export default class DrawUI {
         this.answerSymbols[i].innerText = symbol;
       }
     }
+  }
+
+  showCongratulations() {
+    this.newGameButton.innerText = 'Поздравляем! Еще вопросик?';
+    this.newGameButton.classList.remove('another-question');
+    this.newGameButton.classList.add('new-game');
   }
 }

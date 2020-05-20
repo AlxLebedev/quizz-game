@@ -78,9 +78,15 @@ body {
   justify-content: center;
 }
 
-.new-game {
+.another-question {
   margin: auto;
   width: 200px;
+}
+
+.new-game {
+  margin: auto;
+  width: 300px;
+  background-color: rgba(240, 61, 97, 0.5);
 }
 
 .section {

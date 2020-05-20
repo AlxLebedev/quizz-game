@@ -33,7 +33,7 @@ inputField.addEventListener('keypress', (event) => {
   key = event.key;
   drawUI.redrawAnswer(answer, key);
   if (checker.isWin()) {
-    console.log('winnneeerrrr!!!!')
+    drawUI.showCongratulations();
   }
 })
 
