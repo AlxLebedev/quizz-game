@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizz app</title>
+<link rel="shortcut icon" href="favicon.ico"><link href="main.css" rel="stylesheet"></head>
+<body>
+  <div class="app-container">
+    <header class="section">
+      <div class="logo"></div>
+      <h1 class="display-none">викторина с вопросами на разные темы</h1>
+      <h2 class="title container" id="title"></h2>
+    </header>
+    <section class="themes-questions section">
+      <div class="themes" id="themes">
+        <div class="theme button" data-id="cinema">кино</div>
+        <div class="theme button" data-id="music">музыка</div>
+      </div>
+      <div class="question-field container hidden hidden-init" id="question-field">
+        <p class="question" id="question"></p>
+      </div>
+    </section>
+    <section class="input-section section hidden hidden-init" id="input-section">
+      <div class="container">
+        <input type="text" class="input-field" id="input-field" autocomplete="off" autofocus>
+      </div>
+    </section>
+    <section class="answer-section container section hidden hidden-init" id="answer-section">
+      <div class="answer-symbols container" id="answer-symbols"></div>
+    </section>
+    <div class="another-question button hidden hidden-init" id="new-game-button">
+      Хочу другой вопрос...
+    </div>
+  </div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
